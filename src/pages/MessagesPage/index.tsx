@@ -1,13 +1,15 @@
+import styles from "./MessagesPage.module.css";
+
 const MessagesPage = () => (
-  <main>
+  <main className={styles.main}>
     {/* expandable drawer */}
-    <nav></nav>
+    <nav>m</nav>
 
     {/* list of messages */}
-    <section></section>
+    <section>Messages</section>
 
     {/* currently opened message */}
-    <section></section>
+    <section>Brooklyn Simmons</section>
   </main>
 );
 
