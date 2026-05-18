@@ -49,7 +49,7 @@ const MessagePreview = ({ message }: Props) => {
             <Text c="gray.6" fz="sm" lineClamp={1} flex={1}>
               {text}
             </Text>
-            {isRead && <Indicator position="middle-end" size={6} mr={4} />}
+            {isRead || <Indicator position="middle-end" size={6} mr={4} />}
           </div>
         </Stack>
       </Group>
