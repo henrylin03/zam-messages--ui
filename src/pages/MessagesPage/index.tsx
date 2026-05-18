@@ -14,6 +14,16 @@ const MessagesPage = () => {
       sentTime: new Date(2026, 4, 17),
       isRead: false,
     },
+    {
+      author: {
+        id: "KW",
+        name: "Kristin Watson",
+        avatarSrc: "https://i.pravatar.cc/100",
+      },
+      text: "thank you for the reminder!",
+      sentTime: new Date(2026, 4, 10),
+      isRead: true,
+    },
   ];
 
   return (

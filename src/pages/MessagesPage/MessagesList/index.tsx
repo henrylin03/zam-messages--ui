@@ -14,7 +14,7 @@ const MessagesList = ({ messages }: Props) => (
       <Button>New message</Button>
     </Group>
     <ScrollArea h="100%" type="auto" offsetScrollbars pl="xs">
-      <Stack component="ul" gap="sm">
+      <Stack component="ul" gap={0}>
         {messages.map((message) => (
           <li>
             <MessagePreview message={message} />
