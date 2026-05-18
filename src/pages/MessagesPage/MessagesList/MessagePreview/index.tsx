@@ -1,8 +1,7 @@
+import { getDateTimeString } from "@/lib/dayjs";
 import { Avatar, Group, Stack, Text } from "@mantine/core";
 import type { Message } from "@models/messages";
-import dayjs from "dayjs";
-import relativeTime from "dayjs/plugin/relativeTime";
-import updateLocale from "dayjs/plugin/updateLocale";
+import type { OpUnitType as TimeUnit } from "dayjs";
 import { Link } from "react-router";
 
 interface Props {
@@ -12,20 +11,17 @@ interface Props {
 const MessagePreview = ({ message }: Props) => {
   const { author, text, sentTime } = message;
 
-  dayjs.extend(relativeTime);
-  dayjs.extend(updateLocale);
-
-  dayjs.updateLocale("en", {
-    relativeTime: {
-      s: "Just now",
-      m: "1m",
-      mm: "%dm",
-      h: "1h",
-      d: "Yesterday",
-    },
-  });
-
-  const timeSinceLastMessage = dayjs(sentTime).fromNow();
+  const TIME_BEFORE_ABSOLUTE_DATE_SHOWN: {
+    unitOfMeasurement: TimeUnit;
+    value: number;
+  } = {
+    unitOfMeasurement: "day",
+    value: 2,
+  };
+  const messageSentTimeDisplayed = getDateTimeString(
+    sentTime,
+    TIME_BEFORE_ABSOLUTE_DATE_SHOWN,
+  );
 
   return (
     <Link to={`/messages/${author.id}`}>
@@ -40,7 +36,7 @@ const MessagePreview = ({ message }: Props) => {
               {author.name}
             </Text>
             <Text c="dimmed" fz="sm" ta="right">
-              {timeSinceLastMessage}
+              {messageSentTimeDisplayed}
             </Text>
           </Group>
           <Text c="gray.6" fz="sm" lineClamp={1}>
