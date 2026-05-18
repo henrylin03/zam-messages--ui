@@ -22,7 +22,7 @@ const MessagePreview = ({ message }: Props) => (
             {String(message.sentTime)}
           </Text> */}
         </Group>
-        <Text c="gray.6" fz="sm">
+        <Text c="gray.6" fz="sm" lineClamp={1}>
           {message.text}
         </Text>
       </Stack>
