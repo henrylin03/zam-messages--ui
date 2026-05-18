@@ -6,3 +6,8 @@
   background-color: var(--mantine-color-gray-2);
   transition: all 100ms ease-in-out;
 }
+
+.bottom {
+  display: flex;
+  align-items: center;
+}

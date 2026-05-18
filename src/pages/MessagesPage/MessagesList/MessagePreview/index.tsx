@@ -1,5 +1,5 @@
 import { getDateTimeString } from "@/lib/dayjs";
-import { Avatar, Group, Stack, Text } from "@mantine/core";
+import { Avatar, Group, Indicator, Stack, Text } from "@mantine/core";
 import type { Message } from "@models/messages";
 import type { OpUnitType as TimeUnit } from "dayjs";
 import { Link } from "react-router";
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const MessagePreview = ({ message }: Props) => {
-  const { author, text, sentTime } = message;
+  const { author, text, sentTime, isRead } = message;
 
   const TIME_BEFORE_ABSOLUTE_DATE_SHOWN: {
     unitOfMeasurement: TimeUnit;
@@ -45,9 +45,12 @@ const MessagePreview = ({ message }: Props) => {
               {messageSentTimeDisplayed}
             </Text>
           </Group>
-          <Text c="gray.6" fz="sm" lineClamp={1}>
-            {text}
-          </Text>
+          <div className={styles.bottom}>
+            <Text c="gray.6" fz="sm" lineClamp={1} flex={1}>
+              {text}
+            </Text>
+            {isRead && <Indicator position="middle-end" size={6} mr={4} />}
+          </div>
         </Stack>
       </Group>
     </Link>

@@ -12,6 +12,7 @@ const MessagesPage = () => {
       },
       text: "What time do you close?",
       sentTime: new Date(2026, 4, 17),
+      isRead: false,
     },
   ];
 
