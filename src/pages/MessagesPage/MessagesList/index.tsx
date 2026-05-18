@@ -1,4 +1,4 @@
-import type { Message } from "../../../models/messages";
+import type { Message } from "@models/messages";
 
 interface Props {
   messages: Message[];
