@@ -3,6 +3,7 @@ import { Avatar, Group, Stack, Text } from "@mantine/core";
 import type { Message } from "@models/messages";
 import type { OpUnitType as TimeUnit } from "dayjs";
 import { Link } from "react-router";
+import styles from "./MessagePreview.module.css";
 
 interface Props {
   message: Message;
@@ -25,7 +26,12 @@ const MessagePreview = ({ message }: Props) => {
 
   return (
     <Link to={`/messages/${author.id}`}>
-      <Group justify="space-between" wrap="nowrap">
+      <Group
+        justify="space-between"
+        wrap="nowrap"
+        className={styles.inner}
+        p="sm"
+      >
         <Avatar
           src={message.author.avatarSrc}
           alt={`Avatar of ${author.name}`}
