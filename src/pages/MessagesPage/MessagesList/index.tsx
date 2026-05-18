@@ -8,7 +8,7 @@ interface Props {
 
 const MessagesList = ({ messages }: Props) => (
   <section className={styles.section}>
-    <Group justify="space-between" component="header">
+    <Group justify="space-between" component="header" p="lg">
       <Title order={2}>Messages</Title>
       <Button>New message</Button>
     </Group>
