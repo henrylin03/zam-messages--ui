@@ -27,16 +27,15 @@ const getDateTimeString = (
   inputTime: Message["sentTime"],
   relativeTimeCutoff: { unitOfMeasurement: TimeUnit; value: number },
 ): string => {
+  const now = dayjs();
   const messageSentTime = dayjs(inputTime);
 
   if (messageSentTime.isYesterday()) return "Yesterday";
+  if (now.diff(messageSentTime, "minute") < 1) return "Just now";
 
-  const timeSinceMessageSent = dayjs().diff(
-    messageSentTime,
-    relativeTimeCutoff.unitOfMeasurement,
-  );
-  const isRecent = timeSinceMessageSent < relativeTimeCutoff.value;
-
+  const isRecent =
+    now.diff(messageSentTime, relativeTimeCutoff.unitOfMeasurement) <
+    relativeTimeCutoff.value;
   if (isRecent) return messageSentTime.fromNow();
   return messageSentTime.format("D MMM YYYY");
 };
