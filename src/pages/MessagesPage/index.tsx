@@ -11,7 +11,8 @@ const MessagesPage = () => {
         avatarSrc: "https://i.pravatar.cc/100",
       },
       text: "What time do you close?",
-      sentTime: new Date(),
+      sentTime: new Date(2026, 4, 17),
+      isRead: false,
     },
   ];
 
