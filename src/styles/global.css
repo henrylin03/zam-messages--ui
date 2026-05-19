@@ -1,3 +1,7 @@
+#root {
+  height: 100dvh;
+}
+
 ul {
   list-style-type: none;
   padding: 0;

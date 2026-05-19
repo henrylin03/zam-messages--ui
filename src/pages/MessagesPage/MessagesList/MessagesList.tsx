@@ -13,7 +13,7 @@ const MessagesList = ({ messages }: Props) => (
       <Title order={2}>Messages</Title>
       <Button>New message</Button>
     </Group>
-    <ScrollArea h="100%" type="auto" offsetScrollbars pl="xs">
+    <ScrollArea offsetScrollbars pl="xs">
       <Stack component="ul" gap={0}>
         {messages.map((message) => (
           <li>

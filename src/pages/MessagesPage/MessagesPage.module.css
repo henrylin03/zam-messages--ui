@@ -1,8 +1,8 @@
 .main {
   padding: var(--mantine-spacing-xl);
   background-color: var(--mantine-color-gray-1);
-  height: 100dvh;
-  
+  height: 100%;
+
   display: grid;
   grid-template-columns: auto 1fr 5fr;
   gap: 1rem;

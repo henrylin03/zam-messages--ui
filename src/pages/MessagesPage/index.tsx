@@ -1,6 +1,6 @@
 import type { Message } from "@models/messages";
 import styles from "./MessagesPage.module.css";
-import MessagesList from "./MessagesList";
+import MessagesList from "./MessagesList/MessagesList";
 
 const MessagesPage = () => {
   const FAKE_MESSAGES: Message[] = [
