@@ -211,7 +211,7 @@ const MessagesPage = () => {
       {/* expandable drawer */}
       <nav>m</nav>
 
-      <MessagesList messages={FAKE_MESSAGES} />
+      <MessagesList messages={[]} />
 
       {/* currently opened message */}
       <section>Brooklyn Simmons</section>
