@@ -1,7 +1,7 @@
 import { Button, Group, ScrollArea, Stack, Title } from "@mantine/core";
 import type { Message } from "@models/messages";
 import styles from "./MessagesList.module.css";
-import MessagePreview from "./MessagePreview";
+import MessagePreview from "./MessagePreview/MessagePreview";
 
 interface Props {
   messages: Message[];

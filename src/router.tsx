@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router";
 import LandingPage from "./pages/LandingPage";
-import MessagesPage from "./pages/MessagesPage";
+import MessagesPage from "./pages/MessagesPage/MessagesPage";
 
 const routes = [
   {
