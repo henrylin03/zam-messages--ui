@@ -7,9 +7,13 @@ const routes = [
     path: "/",
     element: <LandingPage />,
   },
+
   {
-    path: "/messages",
-    element: <MessagesPage />,
+    path: "messages",
+    children: [
+      { index: true, Component: MessagesPage },
+      { path: ":chatId", Component: MessagesPage },
+    ],
   },
 ];
 
