@@ -26,7 +26,7 @@ const MessagesList = ({ messages }: Props) => (
       >
         <Stack component="ul" gap={0}>
           {messages.map((message) => (
-            <li>
+            <li key={message.author.id}>
               <MessagePreview message={message} />
             </li>
           ))}
