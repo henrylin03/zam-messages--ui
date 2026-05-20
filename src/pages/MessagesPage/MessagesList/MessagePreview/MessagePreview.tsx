@@ -2,7 +2,7 @@ import { getDateTimeString } from "@/lib/dayjs";
 import { Avatar, Group, Indicator, Stack, Text } from "@mantine/core";
 import type { Message } from "@models/messages";
 import type { OpUnitType as TimeUnit } from "dayjs";
-import { Link } from "react-router";
+import { NavLink } from "react-router";
 import styles from "./MessagePreview.module.css";
 
 interface Props {
@@ -19,13 +19,19 @@ const MessagePreview = ({ message }: Props) => {
     unitOfMeasurement: "day",
     value: 2,
   };
+
   const messageSentTimeDisplayed = getDateTimeString(
     sentTime,
     TIME_BEFORE_ABSOLUTE_DATE_SHOWN,
   );
 
   return (
-    <Link to={`/messages/${author.id}`}>
+    <NavLink
+      to={`/messages/${author.id}`}
+      className={({ isActive }) =>
+        [isActive ? styles.activeLink : ""].join(" ")
+      }
+    >
       <Group
         justify="space-between"
         wrap="nowrap"
@@ -53,7 +59,7 @@ const MessagePreview = ({ message }: Props) => {
           </div>
         </Stack>
       </Group>
-    </Link>
+    </NavLink>
   );
 };
 
