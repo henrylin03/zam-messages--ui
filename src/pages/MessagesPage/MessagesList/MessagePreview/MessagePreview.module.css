@@ -11,3 +11,7 @@
   display: flex;
   align-items: center;
 }
+
+.activeLink > .inner {
+  background-color: var(--mantine-color-gray-2)
+}
