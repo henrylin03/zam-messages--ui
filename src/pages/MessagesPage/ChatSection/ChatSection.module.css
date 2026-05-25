@@ -13,3 +13,17 @@
 .messagesSection {
   flex: 1;
 }
+
+.inputSection {
+  position: relative;
+}
+
+.input {
+  position: relative;
+}
+
+.sendBtn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}

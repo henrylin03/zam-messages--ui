@@ -1,4 +1,4 @@
-import { Avatar, Paper, Textarea, Title } from "@mantine/core";
+import { Avatar, Button, Paper, Textarea, Title } from "@mantine/core";
 import type { User } from "@models/user";
 import styles from "./ChatSection.module.css";
 import type { Message } from "@models/messages";
@@ -28,8 +28,9 @@ const ChatSection = ({ chatId, chatName, message }: Props) => {
       {/* core chat section */}
       <section className={styles.messagesSection}></section>
 
-      <Paper component="section" p="lg">
-        <Textarea placeholder="Type your message" />
+      <Paper component="section" p="lg" className={styles.inputSection}>
+        <Textarea placeholder="Type your message" className={styles.input} />
+        <Button className={styles.sendBtn}>Send</Button>
       </Paper>
     </Paper>
   );
