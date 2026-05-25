@@ -15,15 +15,13 @@
 }
 
 .inputSection {
-  position: relative;
+  width: 100%;
+  padding: var(--mantine-spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--mantine-spacing-md);
 }
 
 .input {
-  position: relative;
-}
-
-.sendBtn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+  width: 100%;
 }

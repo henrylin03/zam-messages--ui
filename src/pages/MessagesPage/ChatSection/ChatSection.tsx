@@ -1,7 +1,8 @@
-import { Avatar, Button, Paper, Textarea, Title } from "@mantine/core";
+import { ActionIcon, Avatar, Paper, Textarea, Title } from "@mantine/core";
 import type { User } from "@models/user";
 import styles from "./ChatSection.module.css";
 import type { Message } from "@models/messages";
+import { IconSend2 } from "@tabler/icons-react";
 
 interface Props {
   chatId: User["id"] | string | undefined;
@@ -28,10 +29,12 @@ const ChatSection = ({ chatId, chatName, message }: Props) => {
       {/* core chat section */}
       <section className={styles.messagesSection}></section>
 
-      <Paper component="section" p="lg" className={styles.inputSection}>
+      <section className={styles.inputSection}>
         <Textarea placeholder="Type your message" className={styles.input} />
-        <Button className={styles.sendBtn}>Send</Button>
-      </Paper>
+        <ActionIcon size="xl" aria-label="Send message">
+          <IconSend2 />
+        </ActionIcon>
+      </section>
     </Paper>
   );
 };
