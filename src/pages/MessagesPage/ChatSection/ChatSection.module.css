@@ -1,0 +1,6 @@
+.header {
+  padding: var(--mantine-spacing-md) var(--mantine-spacing-lg);
+  border-bottom: 1px solid var(--mantine-color-gray-2);
+  display: flex;
+  gap: var(--mantine-spacing-md);
+}
