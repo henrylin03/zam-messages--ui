@@ -1,0 +1,13 @@
+.inner {
+  border-radius: var(--mantine-radius-sm);
+}
+
+.inner:hover {
+  background-color: var(--mantine-color-gray-1);
+  transition: all 100ms linear;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+}

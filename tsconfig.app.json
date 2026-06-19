@@ -22,11 +22,11 @@
     "noFallthroughCasesInSwitch": true,
 
     "paths": {
-      "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@pages/*": ["./src/pages/*"],
-      "@types/*": ["./src/models/*"],
-      "@hooks/*": ["./src/hooks/*"]
+      "@models/*": ["./src/models/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@/*": ["./src/*"]
     }
   },
   "include": ["src"]
